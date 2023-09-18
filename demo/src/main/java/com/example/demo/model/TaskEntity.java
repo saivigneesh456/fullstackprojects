@@ -25,4 +25,5 @@ public class TaskEntity {
   private String studentdob;
   private String studentphonenumber;
   private String studentaddress;
+  private String studentimage;
 }

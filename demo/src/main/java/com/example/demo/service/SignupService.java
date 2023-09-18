@@ -8,14 +8,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class SignupService {
 
-    private final SignupRepository signupRepository;
+    // private final SignupRepository signupRepository;
 
     @Autowired
-    public SignupService(SignupRepository signupRepository) {
-        this.signupRepository = signupRepository;
-    }
+   SignupRepository signupRepository;
+
+    // public SignupService(SignupRepository signupRepository) {
+    //     this.signupRepository = signupRepository;
+    // }
 
     public SignupModel addSignup(SignupModel signupModel) {
+        signupModel.setUserrole("user");
         return signupRepository.save(signupModel);
     }
 

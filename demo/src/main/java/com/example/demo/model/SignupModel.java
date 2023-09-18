@@ -26,4 +26,5 @@ public class SignupModel {
   private String email;
   private String password;
   private int age;
+  private String userrole;
 }

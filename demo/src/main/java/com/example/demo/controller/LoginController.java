@@ -7,17 +7,15 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/")
+@CrossOrigin("*")
 public class LoginController {
 
-    private final LoginService loginService;
 
     @Autowired
-    public LoginController(LoginService loginService) {
-        this.loginService = loginService;
-    }
+    LoginService loginService;
 
     @PostMapping("login")
-    public LoginModel addLogin(@RequestBody LoginModel loginModel) {
+    public String addLogin(@RequestBody LoginModel loginModel) {
         return loginService.addLogin(loginModel);
     }
 
